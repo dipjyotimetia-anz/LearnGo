@@ -1,5 +1,5 @@
 syntax = "proto3";
-
+//protoc --go_out=. *.proto
 package main;
 
 message SocialFollowers {
