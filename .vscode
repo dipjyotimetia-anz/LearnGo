@@ -1,0 +1,74 @@
+{
+    "github.copilot.advanced": {
+        "enabled": true,
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 14,
+    "editor.fontVariations": false,
+    "go.toolsManagement.autoUpdate": true,
+    "go.useLanguageServer": true,
+    "go.addTags": {
+        "tags": "json",
+        "options": "json=omitempty",
+        "promptForTags": false,
+        "transform": "snakecase",
+    },
+    "gopls": {
+        "formatting.gofumpt": true,
+        "usePlaceholders": true,
+        // If true, enable additional analyses with staticcheck.
+        // Warning: This will significantly increase memory usage.
+        // DISABLED, done via
+        "staticcheck": false,
+        "ui.semanticTokens": true 
+    },
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast",
+        "--timeout",
+        "5m"
+    ],
+    // disable test caching, race and show coverage (in sync with makefile)
+    "go.testFlags": [
+        "-cover",
+        "-race",
+        "-count=1",
+        "-v",
+        "-s",
+        "-benchtime=5s",
+        "-timeout=5m"
+    ],
+    "go.enableCodeLens": {
+        "runtest": true,
+    },
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always",
+            "source.fixAll": "always"
+        },
+    },
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.compositeLiteralTypes": true,
+    "go.inlayHints.functionTypeParameters": true,
+    "go.inlayHints.parameterNames": true,
+    "go.inlayHints.rangeVariableTypes": true,
+    "go.inlayHints.constantValues": true,
+    "go.diagnostic.vulncheck": "Imports",
+    "editor.inlayHints.fontSize": 14,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "full",
+    "git.ignoreRebaseWarning": true,
+    "workbench.colorTheme": "Atom One Dark",
+    "github.copilot.chat.generateTests.codeLens": true,
+    "github.copilot.chat.temporalContext.enabled": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "git.replaceTagsWhenPull": true,
+    "telemetry.telemetryLevel": "off",
+}
